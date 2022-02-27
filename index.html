@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codecademy HTML course</title>
+      <!-- below is from the tables training -->
+  <link href="https://fonts.googleapis.com/css?family=Lato: 100,300,400,700|Luckiest+Guy|Oxygen:300,400" rel="stylesheet">
+  <link href="style.css" type="text/css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Spicy+Rice" rel="stylesheet">
+</head>
+<body>
+    
+<!-- HTML is organized as a collection of family tree relationships. 
+    As you saw in the last exercise, we placed <p> tags within <body> 
+        tags. When an element is contained inside another element, 
+        it is considered the child of that element. The child element is
+        said to be nested inside of the parent element. -->
+
+  <!-- Displaying Text
+If you want to display text in HTML, you can use a paragraph or span:
+
+Paragraphs (<p>) contain a block of plain text.
+<span> contains short pieces of text or other HTML. 
+They are used to separate small pieces of content that are on the same line as other content. -->
+
+<!-- Before we learn how to link between internal pages, let’s establish where
+     our files are stored. When making multi-page static websites,
+      web developers often store HTML files in the root directory,
+      or a main folder where all the files for the project are stored.
+       As the size of the projects you create grows, 
+    you may use additional folders within the main project folder to organize your code. -->
+    <!-- basically creating index.html ; about.html ; etc -->
+    <!-- A relative path is a filename that shows the path to a local file 
+        (a file on the same website, such as ./index.html) versus an absolute path 
+        (a full URL, like https://www.codecademy.com/learn/learn-html which is stored in a different folder). 
+        The ./ in ./index.html tells the browser to look for the file in the current folder. -->
+
+
+        <!--  A full list of available HTML tags can be found in Mozilla documentation. -->
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element -->
+
+        <h1>HTML course, Codecademy</h1>
+        <h2>Elements and Structure</h2>
+        <ul>
+            <li><a href="#intro"> Intro to HTML</a></li>
+            <li><a href="#tables">Tables</a></li>
+            <li><a href="#forms">Forms</a></li>
+            <li><a href="#formvalid">Form Validation</a></li>
+            <li><a href="#semantic">Semantic HTML</a></li>
+        </ul> 
+
+<div id="intro">
+<p> my text <em>emphasis for italic</em> or <strong> strong for bold</strong></p>
+<br>
+<span><p>mi text</p></span>
+<p>below will be my unordered list</p>
+<ul>
+    <li>Limes</li>
+    <li>Tortillas</li>
+    <li>Chicken</li>
+  </ul>
+  <ol>
+    <li>Preheat the oven to 350 degrees.</li>
+    <li>Mix whole wheat flour, baking soda, and salt.</li>
+    <li>Cream the butter, sugar in separate bowl.</li>
+    <li>Add eggs and vanilla extract to bowl.</li>
+  </ol>
+
+   <a href="./index.html">Brown Bear</a>
+  <a href="./aboutme.html">About Me</a>
+  <h1>The Brown Bear</h1>
+  <!-- remember the below - very useful for a longer page -->
+  <!-- it is basically a contents table -->
+    <ul class="blacktext">
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#habitat">Habitat</a></li>
+        <li><a href="#media">Media</a></li>
+    </ul>  
+  <div id="introduction">
+    <h2>About Brown Bears</h2>
+    <p>The brown bear (<em>Ursus arctos</em>) is native to parts of northern Eurasia and North America. Its conservation status is currently <strong>Least Concern</strong>.<br /><br /> There are many subspecies within the brown bear species, including the
+      Atlas bear and the Himalayan brown bear.</p>
+    <a href="https://en.wikipedia.org/wiki/Brown_bear" target="_blank">Learn More</a>
+    <h3>Species</h3>
+    <ul>
+      <li>Arctos</li>
+      <li>Collarus</li>
+      <li>Horribilis</li>
+      <li>Nelsoni (extinct)</li>
+    </ul>
+    <h3>Features</h3>
+    <p>Brown bears are not always completely brown. Some can be reddish or yellowish. They have very large, curved claws and huge paws. Male brown bears are often 30% larger than female brown bears. They can range from 5 feet to 9 feet from head to toe.</p>
+  </div>
+  <div id="habitat">
+    <h2>Habitat</h2>
+    <h3>Countries with Large Brown Bear Populations</h3>
+    <ol>
+      <li>Russia</li>
+      <li>United States</li>
+      <li>Canada</li>
+    </ol>
+    <h3>Countries with Small Brown Bear Populations</h3>
+    <p>Some countries with smaller brown bear populations include Armenia, Belarus, Bulgaria, China, Finland, France, Greece, India, Japan, Nepal, Poland, Romania, Slovenia, Turkmenistan, and Uzbekistan.</p>
+  </div>
+  <div id="media">
+    <h2>Media</h2>
+    <a href="https://en.wikipedia.org/wiki/Brown_bear" target="_blank"><img src="https://content.codecademy.com/courses/web-101/web101-image_brownbear.jpg"/></a>
+    <video src="https://content.codecademy.com/courses/freelance-1/unit-1/lesson-2/htmlcss1-vid_brown-bear.mp4" height="240" width="320" controls>Video not supported</video>
+  </div>
+</div>
+<br><br><br>
+
+
+<div id="tables">
+
+    <ul class="navigation">
+        <li><img src="https://content.codecademy.com/courses/web-101/unit-9/htmlcss1-img_logo-shiptoit.png" height="20px;"></li>
+        <li class="active">Action List</li>
+        <li>Profiles</li>
+        <li>Settings</li>
+      </ul>
+    
+      <div class="search">Search the table</div>
+    
+      <table>
+        <thead>
+          <tr>
+            <th>Company Name</th>
+            <th>Number of Items to Ship</th>
+            <th>Next Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Adam's Greenworks</th>
+            <td>14</td>
+            <td>Package Items</td>
+          </tr>
+          <tr>
+            <th>Davie's Burgers</th>
+            <td>2</td>
+            <td>Send Invoice</td>
+          </tr>
+          <tr>
+            <th>Baker's Bike Shop</th>
+            <td>3</td>
+            <td>Send Invoice</td>
+          </tr>
+          <tr>
+            <th>Miss Sally's Southern</th>
+            <td>4</td>
+            <td>Ship</td>
+          </tr>
+          <tr>
+            <th>Summit Resort Rentals</th>
+            <td>4</td>
+            <td>Ship</td>
+          </tr>
+          <tr>
+            <th>Strike Fitness</th>
+            <td>1</td>
+            <td>Enter Order</td>
+          </tr>
+          </tbody>
+          <tfoot>
+            <td>Total</td>
+            <td>28</td>
+        </tfoot>  
+      </table>
+<br><br><br>
+<!-- Note, also, the use of the scope attribute, which can take one of two values:
+
+row - this value makes it clear that the heading is for a row.
+col - this value makes it clear that the heading is for a column. -->
+
+
+<!-- Data can span columns using the colspan attribute. The attribute accepts an integer 
+    (greater than or equal to 1) to denote the number of columns it spans across. -->
+<!-- colspan="2" -->
+<!-- Data can also span multiple rows using the rowspan attribute. -->
+
+<table>
+    <thead>
+      <tr>
+        <th></th>
+        <th scope="col">Saturday</th>
+        <th scope="col">Sunday</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Morning</th>
+        <td rowspan="2">Work</td>
+        <td rowspan="3">Relax</td>
+      </tr>
+      <tr>
+       <th scope="row">Afternoon</th>
+      </tr>
+      <tr>
+        <th scope="row">Evening</th>
+        <td>Dinner</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+<br><br><br>
+<div id="forms">
+
+
+    <section id="overlay">
+        <img src="https://content.codecademy.com/courses/web-101/unit-6/htmlcss1-img_burger-logo.svg" alt="Davie's Burgers Logo" id="logo">
+        <hr>
+               
+        <form action="/practice.html" method="POST">
+    <h1>Creating a form</h1>
+    <p>Looks like you want to learn how to create an HTML form. Well, the best way to learn is to play around with it.</p>
+  </form>
+
+  <form action="/example.html" method="POST">
+    <h1>Login to start creating a burger!</h1>  
+     <input type="text" name="username" value="Davie">
+
+</form>
+<form action="/example.html" method="POST">
+    <h1>Login to start creating a burger!</h1>
+    
+<label for="username">Text above search bar</label>
+<br>
+<input type="text" name="username" id="username" value="Text inside search bar">
+</form>
+
+<!-- Password Input -->
+<!-- We wouldn’t want our information to be seen by anyone peeking over our shoulder! 
+    Luckily, we have the type="password" attribute for <input>! -->
+
+    <form>
+        <h1>Login to start creating a burger!</h1>
+<label for="username">Username:</label>
+      <input type="text" name="username" id="username">
+<br>
+<label for="user-pw">Password:</label>
+<!--Add your code below-->
+        <input id="user-pw" type="password" name="user-pw">
+</form>
+
+<!-- By setting type="number" for an <input> we can restrict what users
+     type into the input field to just numbers (and a few special characters
+      like -, +, and .). We can also provide a step attribute which creates arrows inside the input
+     field to increase or decrease by the value of the step attribute. -->
+
+     <form>
+        <label for="years"> Years of experience: </label>
+        <input id="years" name="years" type="number" step="1">
+      </form>
+
+      <form>
+        <h1>Create a burger!</h1>
+				<section class="protein">
+          <label for="patty">What type of protein would you like?</label>
+    			<input type="text" name="patty" id="patty" value="beef">
+        </section>
+        <hr>
+
+        <section class="patties">
+          <label for="amount">How many patties would you like?</label>
+	      					<input type="number" id="amount" name="amount" step="1">
+        </section>
+        <section class="cooked">
+            <label for="doneness">How do you want your patty cooked</label>
+            <br>
+            <span>Rare</span>
+                
+            <input id="doneness" name="doneness" type="range" min="0" max="5" step="0.5">
+            
+            <span>Well-Done</span>
+          </section>
+          <section class="toppings">
+            <span>What toppings would you like?</span>
+            <br>
+            <!--Add your code below for the first checkbox-->
+            <input id="lettuce" name="topping" type="checkbox" value="lettuce">
+                      <label for="lettuce">Lettuce</label><br>
+            <!--Add your code below for the second checkbox-->
+            <input id="tomato" name="topping" type="checkbox" value="tomato">
+            <label for="tomato">Tomato</label> <br>
+            <!--Add your code below for the third checkbox-->
+            <input id="sausage" name="topping" type="checkbox" value="sausage">
+            <label for="sausage">Sausage</label> 
+  
+          </section>
+          <section class="cheesy">
+            <span>Would you like to add cheese?</span>
+            <br>
+            <input type="radio" id="yes" name="cheese" value="yes">
+            <label for="yes">Yes</label><br>
+             <input type="radio" id="no" name="cheese" value="no">
+            <label for="no">No</label>
+          </section>
+          <section class="bun-type">
+            <label for="bun">What type of bun would you like?</label>
+             <select id="bun" name="bun">
+                  <option value="sesame">Sesame</option>
+                  <option value="potato">Potato</option>
+                  <option value="brioche">Brioche</option>
+             </select>
+        </section>
+
+        <section class="sauce-selection">
+            <label for="sauce">What type of sauce would you like?</label>
+  <input type="text" list="sauces" id="sauce" name="sauce">
+  <!--id below matches list above-->
+            <datalist id="sauces"> 
+     <option value="ketchup"></option>
+     <option value="mayo"></option>
+     <option value="garlic mayo"></option>
+     <option value="BBQ"></option>
+    <option value="Nandos"></option>
+    <option value="Other"></option>  
+</datalist>
+</section>
+<section class="extra-info">
+    <label for="extra">Anything else you want to add?</label>
+    <br>
+               <textarea id="extra" name="extra" rows="3" cols="40"> Type your comments here
+     </textarea>
+     <hr>
+
+     <section class="submission">
+       <!--Add your code below-->
+       <input type="submit" value="Submit">
+     </section>
+      </form>
+
+      <!-- Range Input -->
+      <!-- Using an <input type="number"> is great if we want to allow users
+         to type in any number of their choosing. But, if we wanted to limit
+          what numbers our users could type we might consider using a different
+           type value. Another option 
+        we could use is setting type to "range" which creates a slider. -->
+
+
+        <form>
+            <label for="volume"> Volume Control</label>
+            <input id="volume" name="volume" type="range" min="0" max="100" step="1">
+          </form>
+
+          <!-- Checkbox Input -->
+<!--  In a <form> we would use the <input> element and set type="checkbox". -->
+
+    <form>
+        <p>Choose your pizza toppings:</p>
+        <label for="cheese">Extra cheese</label>
+        <input id="cheese" name="topping" type="checkbox" value="cheese">
+        <br>
+        <label for="pepperoni">Pepperoni</label>
+        <input id="pepperoni" name="topping" type="checkbox" value="pepperoni">
+        <br>
+        <label for="anchovy">Anchovy</label>
+        <input id="anchovy" name="topping" type="checkbox" value="anchovy">
+      </form>    
+
+      <!-- radio button -->
+      <form>
+        <p>What is sum of 1 + 1?</p>
+        <input type="radio" id="two" name="answer" value="2">
+        <label for="two">2</label>
+        <br>
+        <input type="radio" id="eleven" name="answer" value="11">
+        <label for="eleven">11</label>
+      </form>
+      <!-- drop down list -->
+      <form>
+        <label for="lunch">What's for lunch?</label>
+        <select id="lunch" name="lunch">
+          <option value="pizza">Pizza</option>
+          <option value="curry">Curry</option>
+          <option value="salad">Salad</option>
+          <option value="ramen">Ramen</option>
+          <option value="tacos">Tacos</option>
+        </select>
+      </form>
+
+<!-- datalist input -->
+<form>
+    <label for="city">Ideal city to visit?</label>
+    <input type="text" list="cities" id="city" name="city">
+   
+    <datalist id="cities">
+      <option value="New York City"></option>
+      <option value="Tokyo"></option>
+      <option value="Barcelona"></option>
+      <option value="Mexico City"></option>
+      <option value="Melbourne"></option>
+      <option value="Other"></option>  
+    </datalist>
+  </form>
+
+</div>
+<br><br><br>
+
+<div id="formvalid">
+
+<!-- Ever wonder how a login page actually works? Or why the combination of
+     a username and password grants you access to a website? The answers lie in validation. 
+    Validation is the concept of checking user provided data against the required data.
+
+There are different types of validation.
+
+ One type is server-side validation, this happens when data 
+ is sent to another machine (typically a server) for validation.
+  An example of this type of validation is the usage of a 
+  login page. The form on the login page accepts username and
+   password input, then sends the data to a server that checks that the pair matches up correctly.
+
+On the other hand, we use client-side validation if we
+ want to check the data on the browser (the client). 
+ This validation occurs before data is sent to the server. 
+ Different browsers implement client-side validation differently,
+  but it leads to the same outcome. -->
+
+<!-- Shared among the different browsers are the benefits
+     of using HTML5’s built-in client-side validation. 
+     It saves us time from having to send information to the 
+     server and wait for the server to send back confirmation 
+     or rejection of the data. This can also help us protect
+      our server from malicious code or data from a malicious
+       user. It also allows us to quickly give feedback to 
+       users for specific fields rather than having them fill
+       in a form again if the data they input into the form was rejected.
+
+In this lesson, we’ll learn how to add some validation checks to our <form>s! -->
+
+<!-- ********************* -->
+<!-- Sometimes we have fields in our <form>s which are
+     not optional, i.e. there must be information provided before we can submit it. 
+    o enforce this rule, we can add the required attribute to an <input> element. -->
+
+    <form action="/example.html" method="POST">
+        <label for="allergies">Do you have any dietary restrictions?</label>
+        <br>
+        <input id="allergies" name="allergies" type="text" required>
+        <br>
+        <input type="submit" value="Submit">
+      </form>
+
+      <section class="overlay">
+        <h1>Guess the right number!</h1>
+        <form action="check.html" method="GET">
+          <!--Add a required attribute to the input element-->
+          <label for="guess">Enter a number between 1-10:</label>
+          <br>
+          <input type="number" name="guess" id="guess" required>
+          <br>
+          <input type="submit" id="submission" value="Submit">
+        </form>
+      </section>
+
+      <form action="/example.html" method="POST">
+        <label for="guests">Enter # of guests:</label>
+        <input id="guests" name="guests" type="number" min="1" max="4">
+        <input type="submit" value="Submit">
+      </form>
+
+      <!-- To set a minimum number of characters for a text field,
+         we add the minlength attribute and a value to set a minimum
+         value. Similarly, to set the maximum number of characters
+         for a text field, we use the maxlength attribute and set a maximum value.  -->
+
+         <form action="/example.html" method="POST">
+            <label for="summary">Summarize your feelings in less than 250 characters</label>
+            <input id="summary" name="summary" type="text" minlength="5" maxlength="250" required>
+            <input type="submit" value="Submit">
+          </form>
+
+<!-- Matching a Pattern -->
+
+<!-- In addition to checking the length of a text,
+     we could also add a validation to check how the text was provided. 
+     or cases when we want user input to follow specific guidelines,
+     we use the pattern attribute and assign it a regular expression, or regex. -->
+<!-- Let’s say we wanted to check for a valid credit card number (a 14 to 16 digit number). 
+    We could use the regex: [0-9]{14,16} which checks that the user provided only
+     numbers and that they entered at least 14 digits and at most 16 digits. -->
+
+     <form action="/example.html" method="POST">
+        <label for="payment">Credit Card Number (no spaces):</label>
+        <br>
+        <input id="payment" name="payment" type="text" required pattern="[0-9]{14,16}">
+        <input type="submit" value="Submit">
+      </form>
+
+      <!-- We might also want to limit usernames to only
+         letters and numbers (and not special characters like ! or @). -->
+
+         <section class="overlay">
+			<h1>Sign Up</h1>
+      <p>Create an account:</p>
+      <form action="submission.html" method="GET">
+        <label for="username">Username:</label>
+        <br>
+				<!--Add the pattern attribute to the input below-->
+				<input id="username" name="username" type="text" required minlength="3" maxlength="15" pattern="[a-zA-Z0-9]+">
+        <br>
+        <label for="pw">Password:</label>
+        <br>
+				<input id="pw" name="pw" type="password" required minlength="8" maxlength="15">
+        <br>
+        <input type="submit" value="Submit">
+      </form>
+    </section>
+ </div>
+
+<div id="semantic">
+
+<!-- When building web pages, we use a combination of non-semantic HTML and Semantic HTML.
+    The word semantic means “relating to meaning,” so semantic 
+    elements provide information about the content between the opening and closing tags. -->
+<!-- image in the folder -->
+<!-- By using Semantic HTML, we select HTML elements based on their meaning, not on how they are presented. Elements such as <div> and <span> are not semantic elements since they provide no context as to what is inside of those tags.
+
+For example, instead of using a <div> element to contain our header information,
+     we could use a <header> element, which is used as a heading section. 
+         By using a <header> tag instead of a <div>, 
+    we provide context as to what information is inside of the opening and closing tag. -->
+
+    <!-- Why use Semantic HTML?
+
+Accessibility: Semantic HTML makes webpages accessible for mobile devices and for people with disabilities as well. This is because screen readers and browsers are able to interpret the code better.
+
+SEO: It improves the website SEO, or Search Engine Optimization, 
+which is the process of increasing the number of people that
+ visit your webpage. With better SEO, search engines are better able to identify the
+ content of your website and weight the most important content appropriately. -->
+
+ <!-- <header> <nav> <main> <footer> <article> <section> etc!! -->
+
+
+    <!-- The <aside> element is used to mark additional information that
+         can enhance another element but isn’t required in
+          order to understand the main content. This element
+           can be used alongside other elements such as <article>
+                or <section>. Some common uses of the <aside> element are for:
+
+Bibliographies
+Endnotes
+Comments
+Pull quotes
+Editorial sidebars
+Additional information -->
+
+<!-- <figure> is an element used to encapsulate media -->
+<!-- It’s possible to add a caption to the image by using <figcaption>. -->
+
+    <figure>
+        <img src="https://content.codecademy.com/courses/SemanticHTML/dogimage.jpeg">
+        <figcaption> Dog
+          </figcaption>
+        </figure>
+
+        <audio>
+            <source src="iAmAnAudioFile.mp3" type="audio/mp3">
+          </audio>
+
+          <!-- Attributes allow us to do many different things to our audio file. 
+            There are many attributes for <audio> but today we’re going to be focusing on controls and src.
+controls: automatically displays the audio controls into the browser such as play and mute.
+src: specifies the URL of the audio file. -->
+
+<audio controls>
+    <source src="https://content.codecademy.com/courses/SemanticHTML/dogBarking.mp3" type="audio/mp3">
+  </audio>
+
+<!-- Some attributes that can alter a video playback include:
+
+controls: When added in, a play/pause button will be added onto the video along with volume
+ control and a fullscreen option.
+autoplay: The attribute which results in a video automatically playing as soon as the page is loaded.
+loop: This attribute results in the video continuously playing on repeat. -->
+
+
+
+</div>
+
+</body>
+</html>
